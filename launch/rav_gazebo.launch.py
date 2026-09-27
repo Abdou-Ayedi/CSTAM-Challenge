@@ -27,8 +27,10 @@ def generate_launch_description():
         
     )
 
+    world_file = os.path.join(pkg_path, 'world', 'my_cafe.world')
+
     gazebo_server = ExecuteProcess(
-        cmd=['gzserver', '--verbose', '-s', 'libgazebo_ros_factory.so'],
+        cmd=['gzserver', '--verbose', '-s', 'libgazebo_ros_factory.so', world_file],
         output='screen'
     )
 

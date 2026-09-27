@@ -21,7 +21,7 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': use_sim_time,
             'autostart': autostart,
-            'map': os.path.join(pkg_rav, 'config', 'rav_map4.yaml'),
+            'map': os.path.join(pkg_rav, 'config', 'cafe_map.yaml'),
             'params_file': os.path.join(pkg_rav, 'config', 'nav2_params.yaml'),
         }.items()
     )
