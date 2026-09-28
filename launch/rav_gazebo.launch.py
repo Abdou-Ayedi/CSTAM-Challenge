@@ -50,7 +50,8 @@ def generate_launch_description():
             '-z', '0.28',
             '-x', '0',
             '-y', '0',
-            '-Y', '0'
+            '-Y', '0',
+            '-spawn_service_timeout', '90'
         ]
     )
 
