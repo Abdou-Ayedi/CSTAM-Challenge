@@ -4,7 +4,7 @@
 Implementing NAV2 and SLAM  robot with gazebo environment.
 
 <div align="center">
-	<img src="img/robot.png">
+	<img src="rav_bot/img/robot.png">
 </div>
 
 ## About
@@ -87,8 +87,8 @@ ros2 launch rav_bot nav2.launch.py
 
 ### Simulation and Visualization
 1. Gazebo Sim (classic Gazebo) (caffe World):
-	![](img/map.png)
+	![](rav_bot/img/map.png)
 
 2. Rviz :
-	![](img/rviz_rav_.png)
+	![](rav_bot/img/rviz_rav_.png)
 
