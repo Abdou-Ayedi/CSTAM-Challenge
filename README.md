@@ -1,10 +1,10 @@
 # RAV mobile robot 
 ---
 
-Implementing NAV2 and SLAM on mobile robot with gazebo environment.
+Implementing NAV2 and SLAM  robot with gazebo environment.
 
 <div align="center">
-	<img src="img/rav_bot.png">
+	<img src="img/robot.png">
 </div>
 
 ## About
@@ -49,16 +49,7 @@ To view in rviz,
 ros2 launch rav_bot rviz.launch.py
 ```
 
-### Run
 
-To launch the robot in Gazebo,
-```bash
-ros2 launch bcr_bot ign.launch.py
-```
-To view in rviz,
-```bash
-ros2 launch bcr_bot rviz.launch.py
-```
 
 ### Mapping with SLAM Toolbox
 
@@ -73,36 +64,31 @@ ros2 launch rav_bot mapping.launch.py
 
 Use the teleop twist keyboard to control the robot and map the area:
 ```bash
-ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=/bcr_bot/cmd_vel
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/rav_bot/cmd_vel
 ```
 
 To save the map:
 ```bash
-cd src/bcr_bot/config
-ros2 run nav2_map_server map_saver_cli -f bcr_map
+
+ros2 run nav2_map_server map_saver_cli -f rav_map
 ```
 
-### Using Nav2 with bcr_bot
+### Using Nav2 
 
 Nav2 is an open-source navigation package that enables a robot to navigate through an environment easily. It takes laser scan and odometry data, along with the map of the environment, as inputs.
 
 NOTE: The command to run navigation is common between all versions of gazebo.
 
-To run Nav2 on bcr_bot:
+To run Nav2:
 ```bash
-ros2 launch bcr_bot nav2.launch.py
+ros2 launch rav_bot nav2.launch.py
 ```
 
 
 ### Simulation and Visualization
-1. Gazebo Sim (classic Gazebo) (obstacle World):
-	![](img/gazebo_rav.png)
+1. Gazebo Sim (classic Gazebo) (caffe World):
+	![](img/map.png)
 
-2. Gazebo Sim (classic Gazebo) (warehouse World):
+2. Rviz :
+	![](img/rviz_rav_.png)
 
-3. Rviz :
-	![](img/rviz_rav_.jpg)
-
-### further plans
-* plan to use this simulation with rav2 and use to get some more tutorial on it with plannars, behaviors and learn more.
-* use Hardware to integrate with same urdf design (hardware project will be in another repo).
