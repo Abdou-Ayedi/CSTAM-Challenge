@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tunibot Delivery</title>
+<style>
+:root{--bg:#f3f6fb;--card:#fff;--ink:#0d1b3d;--mut:#5b6785;--acc:#1746d6;--ok:#12805c;--warn:#b7791f;--bad:#c53030;--line:#d9e0ee}
+@media(prefers-color-scheme:dark){:root{--bg:#0a1230;--card:#111c46;--ink:#eaf0ff;--mut:#9aa8d0;--acc:#5b8cff;--ok:#3ecf9b;--warn:#f0b64a;--bad:#ff7a7a;--line:#243063}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{display:flex;gap:16px;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line)}
+h1{font-size:1.15rem;margin:0;flex:1}
+#conn{font-size:.85rem;color:var(--mut)}
+#conn::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--bad);margin-right:6px}
+#conn.up::before{background:var(--ok)}
+nav button{font:inherit;padding:8px 16px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+nav button[aria-selected=true]{background:var(--acc);color:#fff;border-color:var(--acc)}
+main{max-width:980px;margin:0 auto;padding:20px}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;margin-bottom:16px}
+.card h2{font-size:1rem;margin:0 0 10px}
+label{display:block;margin:10px 0 4px;color:var(--mut)}
+select,input[type=range],button.go{font:inherit;padding:10px;width:100%;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+input[type=range]{padding:0}
+button.go{background:var(--acc);color:#fff;border:0;cursor:pointer;margin-top:14px}
+button.go:disabled{opacity:.5;cursor:default}
+button.sec{font:inherit;padding:8px 14px;margin:0 8px 8px 0;border:1px solid var(--line);border-radius:6px;background:none;color:var(--ink);cursor:pointer}
+button.sec.danger{color:var(--bad);border-color:var(--bad)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.big{font-size:2rem;font-weight:700}
+.bar{position:relative;height:10px;background:var(--line);border-radius:5px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--ok);width:0;transition:width .4s}
+.bar b{position:absolute;top:0;bottom:0;width:2px;background:var(--ink)}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+.tag{padding:2px 8px;border-radius:10px;font-size:.85rem;border:1px solid var(--line)}
+.DELIVERED{color:var(--ok)}.FAILED,.CANCELLED{color:var(--bad)}.IN_PROGRESS{color:var(--acc)}.PENDING{color:var(--warn)}
+#msg{margin-top:10px;color:var(--mut)}
+.rule{display:flex;gap:10px;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--line)}
+.rule:last-child{border:0}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--line)}
+.dot.ok{background:var(--ok)}.dot.warn{background:var(--warn)}.dot.bad{background:var(--bad)}
+.mut{color:var(--mut)}
+#map{width:100%;max-height:480px;background:var(--bg);border:1px solid var(--line);border-radius:6px}
+#map text{fill:var(--ink);font-size:11px}
+#map .loc{fill:var(--card);stroke:var(--mut);stroke-width:1.5}
+#map .dockm{fill:var(--ok);stroke:none}
+#map .tgt{stroke:var(--acc);stroke-width:3;fill:var(--card)}
+#robot{fill:var(--acc);stroke:var(--card);stroke-width:2;transition:transform .8s linear}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Tunibot Delivery</h1>
+  <span id="conn" role="status">Hors ligne</span>
+  <nav>
+    <button id="t-user" aria-selected="true">Commander</button>
+    <button id="t-admin" aria-selected="false">Admin</button>
+  </nav>
+</header>
+<main>
+<section id="user" class="on">
+  <div class="two">
+    <div>
+      <div class="card">
+        <label for="item">Boisson ou plat</label>
+        <select id="item">
+          <option>Café</option><option>Thé</option><option>Eau</option>
+          <option>Jus d'orange</option><option>Sandwich</option>
+        </select>
+        <label for="dest">Table de livraison</label>
+        <select id="dest"></select>
+        <button class="go" id="send">Envoyer la commande</button>
+        <p id="msg" role="status"></p>
+      </div>
+      <div class="card"><h2>Mes dernières commandes</h2>
+        <table><tbody id="myorders"><tr><td>Aucune commande pour l'instant.</td></tr></tbody></table>
+      </div>
+    </div>
+    <div class="card"><h2>Où est le robot ?</h2><div id="mapUser"></div></div>
+  </div>
+</section>
+ 
+<section id="admin">
+  <div class="grid">
+    <div class="card"><div>État</div><div class="big" id="state">–</div></div>
+    <div class="card"><div>Batterie</div><div class="big" id="batt">–</div>
+      <div class="bar"><i id="battbar"></i><b id="thr"></b></div></div>
+    <div class="card"><div>Position (x, y)</div><div class="big" id="pose">–</div></div>
+    <div class="card"><div>Nav2</div><div class="big" id="nav">–</div></div>
+  </div>
+ 
+  <div class="two">
+    <div class="card"><h2>Auto-docking</h2>
+      <div class="rule"><span class="dot" id="d-batt"></span><div><strong>Batterie</strong><br><span class="mut" id="t-batt">–</span></div></div>
+      <div class="rule"><span class="dot" id="d-idle"></span><div><strong>File vide</strong><br><span class="mut" id="t-idle">–</span></div></div>
+      <div class="rule"><span class="dot" id="d-dock"></span><div><strong>Station de charge</strong><br><span class="mut" id="t-dock">–</span></div></div>
+      <p class="mut" style="margin:10px 0 0">Le robot rentre seul quand la batterie passe sous <span id="thrtxt"></span> % ou quand il n'a plus rien à livrer.</p>
+      <div style="margin-top:12px">
+        <button class="sec" id="dock">Renvoyer au dock</button>
+        <button class="sec danger" id="cancel">Annuler la livraison</button>
+      </div>
+    </div>
+    <div class="card"><h2>Plan du restaurant</h2><div id="mapAdmin"></div></div>
+  </div>
+ 
+  <div class="card"><h2>Test de la batterie</h2>
+    <label for="lvl">Forcer le niveau : <strong id="lvltxt">50 %</strong></label>
+    <input type="range" id="lvl" min="0" max="100" value="50">
+    <p class="mut" style="margin:8px 0 0">Descends sous le seuil pour voir le robot rentrer au dock.</p>
+  </div>
+ 
+  <div class="card"><h2>File des commandes</h2>
+    <table><thead><tr><th>ID</th><th>Article</th><th>Table</th><th>Statut</th></tr></thead>
+    <tbody id="orders"><tr><td colspan="4">Aucune commande.</td></tr></tbody></table>
+  </div>
+</section>
+</main>
+ 
+<script>
+const $ = id => document.getElementById(id);
+const api = (p, o) => fetch(p, o).then(r => r.ok ? r.json() : r.json().then(e => Promise.reject(e)));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ 
+const LOW_BATTERY = 20;   // doit correspondre au seuil du backend
+const LOCS = {
+  dock:    {x: 0.0,     y: 0.0},
+  kitchen: {x: 1.5,     y: 0.5},
+  table_1: {x: 1.0678,  y: -1.6213},
+  table_2: {x: 2.9213,  y: -5.4883},
+  table_3: {x: -0.8462, y: -5.5085},
+  table_4: {x: 2.9414,  y: -9.0734},
+  table_5: {x: -0.9469, y: -9.0331},
+};
+const label = k => k.replace('_', ' ');
+ 
+/* ---------- onglets ---------- */
+function tab(name){
+  for (const t of ['user','admin']){
+    $(t).classList.toggle('on', t===name);
+    $('t-'+t).setAttribute('aria-selected', t===name);
+  }
+}
+$('t-user').onclick = () => tab('user');
+$('t-admin').onclick = () => tab('admin');
+ 
+/* ---------- plan SVG (mêmes coordonnées que locations.yaml) ---------- */
+const S = 40, X0 = -2, Y0 = 1.5;
+const px = x => (x - X0) * S, py = y => (Y0 - y) * S;
+function mapSvg(id){
+  let g = '';
+  for (const [k, p] of Object.entries(LOCS)){
+    const cls = k === 'dock' ? 'dockm' : 'loc';
+    g += `<g data-loc="${k}"><rect class="${cls}" x="${px(p.x)-12}" y="${py(p.y)-12}" width="24" height="24" rx="4"/>
+      <text x="${px(p.x)}" y="${py(p.y)-17}" text-anchor="middle">${label(k)}</text></g>`;
+  }
+  $(id).innerHTML = `<svg id="map-${id}" class="mapsvg" viewBox="0 0 ${6.5*S} ${12*S}" role="img" aria-label="Plan du restaurant" id="map">
+    ${g}<circle class="robot" r="9" cx="0" cy="0" style="fill:var(--acc);stroke:var(--card);stroke-width:2;transition:transform .8s linear" transform="translate(${px(0)},${py(0)})"/></svg>`;
+  $(id).firstChild.style.cssText = 'width:100%;max-height:480px;background:var(--bg);border:1px solid var(--line);border-radius:6px';
+}
+mapSvg('mapUser'); mapSvg('mapAdmin');
+document.querySelectorAll('.mapsvg text').forEach(t => { t.style.fill = 'var(--ink)'; t.style.fontSize = '11px'; });
+document.querySelectorAll('.mapsvg .loc').forEach(r => { r.style.fill = 'var(--card)'; r.style.stroke = 'var(--mut)'; r.style.strokeWidth = 1.5; });
+document.querySelectorAll('.mapsvg .dockm').forEach(r => { r.style.fill = 'var(--ok)'; });
+ 
+function moveRobot(pose, target){
+  document.querySelectorAll('.mapsvg').forEach(svg => {
+    if (pose) svg.querySelector('.robot').setAttribute('transform', `translate(${px(pose.x)},${py(pose.y)})`);
+    svg.querySelectorAll('[data-loc] rect').forEach(r => {
+      const on = r.parentNode.dataset.loc === target;
+      r.style.stroke = on ? 'var(--acc)' : (r.classList.contains('dockm') ? 'none' : 'var(--mut)');
+      r.style.strokeWidth = on ? 3 : 1.5;
+    });
+  });
+}
+ 
+/* ---------- commande ---------- */
+api('/locations').then(d => {
+  $('dest').innerHTML = d.locations.map(l => `<option value="${esc(l)}">${esc(label(l))}</option>`).join('');
+}).catch(() => { $('msg').textContent = 'Impossible de charger les tables. Le serveur tourne-t-il ?'; });
+ 
+$('send').onclick = async () => {
+  $('send').disabled = true;
+  try {
+    const o = await api('/orders', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({item: $('item').value, destination: $('dest').value})});
+    $('msg').textContent = `Commande ${o.id} envoyée.`;
+  } catch (e) { $('msg').textContent = 'Échec : ' + (e.detail || 'serveur injoignable'); }
+  $('send').disabled = false;
+};
+$('dock').onclick = async () => { await api('/robot/dock', {method:'POST'}).catch(()=>{}); };
+$('cancel').onclick = async () => {
+  if (confirm('Annuler la livraison en cours ?')) await api('/robot/cancel', {method:'POST'}).catch(()=>{});
+};
+ 
+/* ---------- test batterie ---------- */
+let lvlTimer;
+$('lvl').oninput = () => {
+  $('lvltxt').textContent = $('lvl').value + ' %';
+  clearTimeout(lvlTimer);
+  lvlTimer = setTimeout(() => api('/debug/battery', {method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({level: +$('lvl').value})}).catch(()=>{}), 250);
+};
+ 
+/* ---------- rendu du statut ---------- */
+$('thr').style.left = LOW_BATTERY + '%';
+$('thrtxt').textContent = LOW_BATTERY;
+const setRule = (k, cls, txt) => { $('d-'+k).className = 'dot ' + cls; $('t-'+k).textContent = txt; };
+ 
+function rows(list){
+  return list.map(o => `<tr><td>${esc(o.id)}</td><td>${esc(o.item)}</td><td>${esc(label(o.destination))}</td>
+    <td><span class="tag ${esc(o.status)}">${esc(o.status)}</span></td></tr>`).join('');
+}
+function render(s){
+  $('state').textContent = s.state ?? '–';
+  const b = s.battery;
+  $('batt').textContent = b == null ? '–' : b + ' %';
+  $('battbar').style.width = (b || 0) + '%';
+  $('battbar').style.background = b != null && b < LOW_BATTERY ? 'var(--bad)' : 'var(--ok)';
+  $('pose').textContent = s.pose ? `${s.pose.x}, ${s.pose.y}` : '–';
+  $('nav').textContent = s.nav2_ready ? 'Prêt' : 'Hors ligne';
+ 
+  const orders = s.orders || [];
+  const active = orders.filter(o => o.status === 'PENDING' || o.status === 'IN_PROGRESS').length;
+  const docking = /dock|charg/i.test(s.state || '');
+  const dist = s.pose ? Math.hypot(s.pose.x - LOCS.dock.x, s.pose.y - LOCS.dock.y) : null;
+  const atDock = dist != null && dist < 0.4;
+ 
+  if (b == null) setRule('batt', '', 'Niveau inconnu');
+  else if (b < LOW_BATTERY) setRule('batt', 'bad', `Niveau bas (${b} %) : retour au dock déclenché`);
+  else setRule('batt', 'ok', `${b} %, au-dessus du seuil de ${LOW_BATTERY} %`);
+ 
+  if (active > 0) setRule('idle', 'warn', `${active} commande(s) à livrer`);
+  else setRule('idle', 'ok', 'Aucune commande : le robot peut rentrer');
+ 
+  if (atDock) setRule('dock', 'ok', 'Le robot est au dock');
+  else if (docking) setRule('dock', 'warn', dist == null ? 'Retour en cours' : `Retour en cours, à ${dist.toFixed(1)} m`);
+  else setRule('dock', '', dist == null ? 'Position inconnue' : `Dock à ${dist.toFixed(1)} m`);
+ 
+  const cur = orders.find(o => o.status === 'IN_PROGRESS');
+  moveRobot(s.pose, docking ? 'dock' : (cur && cur.destination));
+ 
+  if (orders.length){
+    $('orders').innerHTML = rows(orders);
+    $('myorders').innerHTML = orders.map(o =>
+      `<tr><td>${esc(o.item)} → ${esc(label(o.destination))}</td><td><span class="tag ${esc(o.status)}">${esc(o.status)}</span></td></tr>`).join('');
+  }
+}
+ 
+/* ---------- WebSocket ---------- */
+function connect(){
+  const ws = new WebSocket((location.protocol==='https:'?'wss://':'ws://') + location.host + '/ws/status');
+  ws.onopen = () => { $('conn').textContent = 'En ligne'; $('conn').className = 'up'; };
+  ws.onmessage = e => render(JSON.parse(e.data));
+  ws.onclose = () => { $('conn').textContent = 'Hors ligne'; $('conn').className = ''; setTimeout(connect, 2000); };
+}
+connect();
+</script>
+</body>
+</html>
+ 
+

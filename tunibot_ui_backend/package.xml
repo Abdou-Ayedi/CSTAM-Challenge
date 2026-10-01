@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>tunibot_ui_backend</name>
+  <version>0.1.0</version>
+  <description>FastAPI bridge between the web dashboard and ROS 2 / Nav2</description>
+  <maintainer email="team@example.com">Team</maintainer>
+  <license>MIT</license>
+  <depend>rclpy</depend>
+  <depend>nav2_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>action_msgs</depend>
+  <depend>python3-yaml</depend>
+  <export><build_type>ament_python</build_type></export>
+</package>
