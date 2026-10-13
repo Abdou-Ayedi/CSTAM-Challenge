@@ -1,0 +1,332 @@
+<?xml version="1.0" ?>
+<!-- my_cafe_2floors.world
+     Floor 1 = your original cafe. Floor 2 = exact copy, 3.0 m higher (same x,y so ONE map works for both).
+     Elevator cabins: floor 1 and floor 2 at x -4.5..-3.1, y 5.0..7.37 (north-west corner), open side facing south.
+     If you change H here, also change the elevator node parameter floor_height. -->
+<sdf version="1.5">
+  <world name="default">
+    <gui>
+      <camera name="user_camera">
+        <pose>0 -20 10 0 0.6 1.5707</pose>
+      </camera>
+    </gui>
+
+    <!-- lets ROS 2 read/set model poses (used by the elevator node) -->
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros><namespace>/</namespace></ros>
+      <update_rate>1.0</update_rate>
+    </plugin>
+
+    <light name="sun" type="directional">
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation><range>1000</range><constant>0.9</constant><linear>0.01</linear><quadratic>0.001</quadratic></attenuation>
+      <direction>0 0.5 -0.9</direction>
+    </light>
+
+    <light name="point_light" type="point">
+      <pose>0 -0.377195 6.59868 0 -0 0</pose>
+      <diffuse>0.784314 0.784314 0.784314 1</diffuse>
+      <specular>0.0980392 0.0980392 0.0980392 1</specular>
+      <attenuation><range>50</range><constant>0.8</constant><linear>0</linear><quadratic>0.001</quadratic></attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision"><geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry></collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
+          <material><ambient>0.3 0.5 0.3 1</ambient><diffuse>0.3 0.5 0.3 1</diffuse><specular>0.1 0.1 0.1 1</specular></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ================= FLOOR 1 (original) ================= -->
+    <include>
+      <uri>model://cafe</uri>
+    </include>
+
+    <include>
+      <name>table1</name>
+      <pose>0.5 -1.6 0.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table2</name>
+      <pose>2.4 -5.5 0.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table3</name>
+      <pose>-1.5 -5.5 0.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table4</name>
+      <pose>2.4 -9 0.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table5</name>
+      <pose>-1.5 -9 0.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <!-- ================= FLOOR 2 (copy, +3.0 m) ================= -->
+    <model name="cafe_floor2">
+      <static>true</static>
+      <pose>0 0 3.0 0 0 0</pose>
+      <link name="link">
+        <collision name="main_floor">
+          <pose>-0.4 -0.75 0.0948 0 0 0</pose>
+          <geometry><box><size>9.38 22.63 0.19</size></box></geometry>
+        </collision>
+        <collision name="wall_1">
+          <pose>-5.03 0.53 1.415 0 0 0</pose>
+          <geometry><box><size>.12 23.16 2.83</size></box></geometry>
+        </collision>
+        <collision name="wall_2">
+          <pose>4.24 -0.31 1.415 0 0 0</pose>
+          <geometry><box><size>.12 21.48 2.83</size></box></geometry>
+        </collision>
+        <collision name="wall_3">
+          <pose>-1.48 7.43 1.415 0 0 0</pose>
+          <geometry><box><size>7.2 0.12 2.83</size></box></geometry>
+        </collision>
+        <collision name="wall_4">
+          <pose>2.09 8.9 1.435 0 0 0</pose>
+          <geometry><box><size>0.12 3.05 2.87</size></box></geometry>
+        </collision>
+        <collision name="wall_5">
+          <pose>3.155 10.4 1.435 0 0 0</pose>
+          <geometry><box><size>2.13 0.12 2.87</size></box></geometry>
+        </collision>
+        <collision name="wall_6">
+          <pose>0.615 -10.98 1.415 0 0 0</pose>
+          <geometry><box><size>7.36 0.15 2.83</size></box></geometry>
+        </collision>
+        <collision name="wall_7">
+          <pose>-4.62 -10.98 1.415 0 0 0</pose>
+          <geometry><box><size>0.93 0.15 2.83</size></box></geometry>
+        </collision>
+        <collision name="wall_8">
+          <pose>-3.61 -10.98 2.69 0 0 0</pose>
+          <geometry><box><size>1.09 0.15 0.28</size></box></geometry>
+        </collision>
+        <collision name="coke">
+          <pose>-4.385 0.26 0.95 0 0 0</pose>
+          <geometry><box><size>1.03 1.03 1.52</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <transparency>0.55</transparency>
+          <geometry><mesh><uri>model://cafe/meshes/cafe.dae</uri></mesh></geometry>
+        </visual>
+      </link>
+    </model>
+
+    <include>
+      <name>table1_f2</name>
+      <pose>0.5 -1.6 3.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table2_f2</name>
+      <pose>2.4 -5.5 3.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table3_f2</name>
+      <pose>-1.5 -5.5 3.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table4_f2</name>
+      <pose>2.4 -9 3.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <include>
+      <name>table5_f2</name>
+      <pose>-1.5 -9 3.25 0 0 0</pose>
+      <uri>model://cafe_table</uri>
+    </include>
+
+    <!-- ================= ELEVATOR ================= -->
+
+    <model name="elevator_f1">
+      <static>true</static>
+      <link name="link">
+      <collision name="left_wall_c">
+        <pose>-4.735 6.185 1.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+      </collision>
+      <visual name="left_wall_v">
+        <pose>-4.735 6.185 1.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+        <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+      </visual>
+      <collision name="right_wall_c">
+        <pose>-2.865 6.185 1.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+      </collision>
+      <visual name="right_wall_v">
+        <pose>-2.865 6.185 1.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+        <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+      </visual>
+        <visual name="floor_pad">
+          <pose>-3.8 6.185 0.196 0 0 0</pose>
+          <geometry><box><size>1.4 2.370 0.012</size></box></geometry>
+          <material><ambient>0.15 0.2 0.35 1</ambient><diffuse>0.15 0.2 0.35 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="elevator_f2">
+      <static>true</static>
+      <link name="link">
+      <collision name="left_wall_c">
+        <pose>-4.735 6.185 4.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+      </collision>
+      <visual name="left_wall_v">
+        <pose>-4.735 6.185 4.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+        <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+      </visual>
+      <collision name="right_wall_c">
+        <pose>-2.865 6.185 4.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+      </collision>
+      <visual name="right_wall_v">
+        <pose>-2.865 6.185 4.440 0 0 0</pose>
+        <geometry><box><size>0.470 2.370 2.5</size></box></geometry>
+        <material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material>
+      </visual>
+        <visual name="floor_pad">
+          <pose>-3.8 6.185 3.196 0 0 0</pose>
+          <geometry><box><size>1.4 2.370 0.012</size></box></geometry>
+          <material><ambient>0.15 0.2 0.35 1</ambient><diffuse>0.15 0.2 0.35 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <!-- floor-1 doors start OPEN (car parked on floor 1), floor-2 doors start CLOSED -->
+
+    <model name="elev_door_f1_L">
+      <pose>-4.6000000000000005 5.05 1.340 0 0 0</pose>
+      <link name="link">
+        <kinematic>true</kinematic>
+        <gravity>false</gravity>
+        <inertial><mass>5</mass><inertia><ixx>1</ixx><iyy>1</iyy><izz>1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+        <collision name="c"><geometry><box><size>0.7 0.06 2.3</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>0.7 0.06 2.3</size></box></geometry>
+          <material><ambient>0.9 0.55 0.1 1</ambient><diffuse>0.9 0.55 0.1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="elev_door_f1_R">
+      <pose>-3.0 5.05 1.340 0 0 0</pose>
+      <link name="link">
+        <kinematic>true</kinematic>
+        <gravity>false</gravity>
+        <inertial><mass>5</mass><inertia><ixx>1</ixx><iyy>1</iyy><izz>1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+        <collision name="c"><geometry><box><size>0.7 0.06 2.3</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>0.7 0.06 2.3</size></box></geometry>
+          <material><ambient>0.9 0.55 0.1 1</ambient><diffuse>0.9 0.55 0.1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="elev_door_f2_L">
+      <pose>-4.15 5.05 4.340 0 0 0</pose>
+      <link name="link">
+        <kinematic>true</kinematic>
+        <gravity>false</gravity>
+        <inertial><mass>5</mass><inertia><ixx>1</ixx><iyy>1</iyy><izz>1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+        <collision name="c"><geometry><box><size>0.7 0.06 2.3</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>0.7 0.06 2.3</size></box></geometry>
+          <material><ambient>0.9 0.55 0.1 1</ambient><diffuse>0.9 0.55 0.1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="elev_door_f2_R">
+      <pose>-3.45 5.05 4.340 0 0 0</pose>
+      <link name="link">
+        <kinematic>true</kinematic>
+        <gravity>false</gravity>
+        <inertial><mass>5</mass><inertia><ixx>1</ixx><iyy>1</iyy><izz>1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+        <collision name="c"><geometry><box><size>0.7 0.06 2.3</size></box></geometry></collision>
+        <visual name="v">
+          <geometry><box><size>0.7 0.06 2.3</size></box></geometry>
+          <material><ambient>0.9 0.55 0.1 1</ambient><diffuse>0.9 0.55 0.1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ================= PEOPLE (floor 1 only) ================= -->
+
+    <actor name="actor1">
+      <pose>0 1 1.25 0 0 0</pose>
+      <skin><filename>file://media/models/walk.dae</filename><scale>1.0</scale></skin>
+      <animation name="walking">
+        <filename>file://media/models/walk.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <plugin name="actor1_plugin" filename="libActorPlugin.so">
+        <target>0 -5 1.2138</target>
+        <target_weight>1.15</target_weight>
+        <obstacle_weight>1.8</obstacle_weight>
+        <animation_factor>5.1</animation_factor>
+        <ignore_obstacles>
+          <model>cafe</model>
+          <model>cafe_floor2</model>
+          <model>ground_plane</model>
+          <model>elevator_f1</model>
+          <model>elevator_f2</model>
+        </ignore_obstacles>
+      </plugin>
+    </actor>
+
+    <actor name="actor2">
+      <pose>-2 -2 1.25 0 0 0</pose>
+      <skin><filename>file://media/models/walk.dae</filename><scale>1.0</scale></skin>
+      <animation name="walking">
+        <filename>file://media/models/walk.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <plugin name="actor2_plugin" filename="libActorPlugin.so">
+        <target>3 2 1.24</target>
+        <target_weight>1.15</target_weight>
+        <obstacle_weight>1.8</obstacle_weight>
+        <animation_factor>5.1</animation_factor>
+        <ignore_obstacles>
+          <model>cafe</model>
+          <model>cafe_floor2</model>
+          <model>ground_plane</model>
+          <model>elevator_f1</model>
+          <model>elevator_f2</model>
+        </ignore_obstacles>
+      </plugin>
+    </actor>
+
+  </world>
+</sdf>
