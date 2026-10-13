@@ -1,0 +1,328 @@
+[0.000000] (-) TimerEvent: {}
+[0.001159] (rav_bot) JobQueued: {'identifier': 'rav_bot', 'dependencies': OrderedDict()}
+[0.001252] (rav_bot) JobStarted: {'identifier': 'rav_bot'}
+[0.020491] (rav_bot) JobProgress: {'identifier': 'rav_bot', 'progress': 'cmake'}
+[0.022182] (rav_bot) JobProgress: {'identifier': 'rav_bot', 'progress': 'build'}
+[0.023029] (rav_bot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/abdou/ros2_ws/src/rav_bot/build/rav_bot', '--', '-j12', '-l12'], 'cwd': '/home/abdou/ros2_ws/src/rav_bot/build/rav_bot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'abdou'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{0caa0dad-35be-5f56-a8ff-afceeeaa6101}'), ('HOME', '/home/abdou'), ('OLDPWD', '/mnt/c/Users/ayadi'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/abdou/ros2_ws/src/rav_bot/install:/home/abdou/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'abdou'), ('NAME', 'AYEDI'), ('WSL_INTEROP', '/run/WSL/1439_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/VMware/bin/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/d/Git/Git/cmd:/mnt/c/Program Files/mosquitto:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/WSL/:/mnt/c/Program Files/nodejs/:/mnt/d/vscode/Microsoft VS Code/bin:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ayadi/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ayadi/Downloads/php-8.4.14-Win32-vs17-x64:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python311/Scripts:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python311:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/ayadi/Downloads/spark-4.1.1-bin-hadoop3/bin:/mnt/c/Users/ayadi/AppData/Local/Coursier/data/bin:/mnt/c/Program Files/Java/jdk-17/bin:/mnt/c/Users/ayadi/AppData/Local/Programs/Ollama:/mnt/c/Users/ayadi/AppData/Local/Programs/mongosh/:/mnt/d/Antigravity/Antigravity/bin:/mnt/c/Users/ayadi/AppData/Roaming/npm:/snap/bin'), ('WT_SESSION', 'a1aadc34-1914-4250-84d3-422a8f1b5f57'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/abdou/ros2_ws/src/rav_bot/install/rav_bot:/home/abdou/ros2_ws/install/rav_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/abdou/ros2_ws/src/rav_bot/build/rav_bot'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/abdou/ros2_ws/src/rav_bot/install/rav_bot:/home/abdou/ros2_ws/install/rav_bot:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.099415] (-) TimerEvent: {}
+[0.199904] (-) TimerEvent: {}
+[0.300429] (-) TimerEvent: {}
+[0.400808] (-) TimerEvent: {}
+[0.501163] (-) TimerEvent: {}
+[0.601645] (-) TimerEvent: {}
+[0.702212] (-) TimerEvent: {}
+[0.802784] (-) TimerEvent: {}
+[0.903246] (-) TimerEvent: {}
+[0.925711] (rav_bot) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.003414] (-) TimerEvent: {}
+[1.103750] (-) TimerEvent: {}
+[1.121822] (rav_bot) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.203869] (-) TimerEvent: {}
+[1.304222] (-) TimerEvent: {}
+[1.363760] (rav_bot) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.363975] (rav_bot) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.364037] (rav_bot) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.378700] (rav_bot) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.402612] (rav_bot) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.404374] (-) TimerEvent: {}
+[1.415887] (rav_bot) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.504490] (-) TimerEvent: {}
+[1.508018] (rav_bot) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.508322] (rav_bot) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.520571] (rav_bot) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.523289] (rav_bot) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.529576] (rav_bot) StdoutLine: {'line': b'-- Generating done\n'}
+[1.532720] (rav_bot) StdoutLine: {'line': b'-- Build files have been written to: /home/abdou/ros2_ws/src/rav_bot/build/rav_bot\n'}
+[1.564084] (rav_bot) CommandEnded: {'returncode': 0}
+[1.565025] (rav_bot) JobProgress: {'identifier': 'rav_bot', 'progress': 'install'}
+[1.578322] (rav_bot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/abdou/ros2_ws/src/rav_bot/build/rav_bot'], 'cwd': '/home/abdou/ros2_ws/src/rav_bot/build/rav_bot', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'abdou'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{0caa0dad-35be-5f56-a8ff-afceeeaa6101}'), ('HOME', '/home/abdou'), ('OLDPWD', '/mnt/c/Users/ayadi'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/abdou/ros2_ws/src/rav_bot/install:/home/abdou/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'abdou'), ('NAME', 'AYEDI'), ('WSL_INTEROP', '/run/WSL/1439_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/VMware/bin/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/d/Git/Git/cmd:/mnt/c/Program Files/mosquitto:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/WSL/:/mnt/c/Program Files/nodejs/:/mnt/d/vscode/Microsoft VS Code/bin:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/ayadi/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ayadi/Downloads/php-8.4.14-Win32-vs17-x64:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python311/Scripts:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python311:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313:/mnt/c/Users/ayadi/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/ayadi/Downloads/spark-4.1.1-bin-hadoop3/bin:/mnt/c/Users/ayadi/AppData/Local/Coursier/data/bin:/mnt/c/Program Files/Java/jdk-17/bin:/mnt/c/Users/ayadi/AppData/Local/Programs/Ollama:/mnt/c/Users/ayadi/AppData/Local/Programs/mongosh/:/mnt/d/Antigravity/Antigravity/bin:/mnt/c/Users/ayadi/AppData/Roaming/npm:/snap/bin'), ('WT_SESSION', 'a1aadc34-1914-4250-84d3-422a8f1b5f57'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/abdou/ros2_ws/src/rav_bot/install/rav_bot:/home/abdou/ros2_ws/install/rav_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/abdou/ros2_ws/src/rav_bot/build/rav_bot'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/abdou/ros2_ws/src/rav_bot/install/rav_bot:/home/abdou/ros2_ws/install/rav_bot:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[1.587093] (rav_bot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.587828] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/rviz\n'}
+[1.588210] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/rviz/rav.rviz\n'}
+[1.588417] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/rviz/rav_bot.rviz\n'}
+[1.588575] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/rviz/abdou.riviz.rviz\n'}
+[1.588784] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf\n'}
+[1.589006] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/camera.xacro\n'}
+[1.589218] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/depth_camera.xacro\n'}
+[1.589407] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/inertial_macros.xacro\n'}
+[1.589582] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/one.urdf\n'}
+[1.590167] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/face.xacro\n'}
+[1.590462] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/robot.urdf.xacro\n'}
+[1.590717] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/ros2_control.xacro\n'}
+[1.590957] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/lidar.xacro\n'}
+[1.591099] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/ultrasonic.xacro\n'}
+[1.591308] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/imu.xacro\n'}
+[1.591517] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/gazebo_control.xacro\n'}
+[1.591786] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/urdf/robot_core.xacro\n'}
+[1.591993] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch\n'}
+[1.592203] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/rav_obstacle.launch.py\n'}
+[1.592411] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/rav_gazebo.launch.py\n'}
+[1.592583] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/nav2.launch.py\n'}
+[1.592878] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/multiple_rav.launch.py\n'}
+[1.593045] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/rsp.launch.py\n'}
+[1.593252] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/rviz.launch.py\n'}
+[1.593479] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/rav_warehouse.launch.py\n'}
+[1.593690] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/tf2.launch\n'}
+[1.593896] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/launch/mapping.launch.py\n'}
+[1.594112] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world\n'}
+[1.594663] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world/my_cafe_2floors.world:Zone.Identifier\n'}
+[1.594886] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world/bookstore.world\n'}
+[1.595038] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world/empty.sdf\n'}
+[1.595244] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world/small_warehouse.sdf\n'}
+[1.595422] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world/my_cafe_2floors.world\n'}
+[1.595628] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world/obstacles.world\n'}
+[1.596073] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/world/my_cafe.world\n'}
+[1.596287] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model\n'}
+[1.596490] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01\n'}
+[1.596692] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/model.config\n'}
+[1.596895] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/meshes\n'}
+[1.597096] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/meshes/aws_robomaker_warehouse_Bucket_01_visual.DAE\n'}
+[1.597299] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/meshes/aws_robomaker_warehouse_Bucket_01_collision.DAE\n'}
+[1.597502] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/model.sdf\n'}
+[1.597724] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/.DS_Store\n'}
+[1.597935] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/materials\n'}
+[1.598115] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/materials/.DS_Store\n'}
+[1.598333] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/materials/textures\n'}
+[1.598568] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Bucket_01/materials/textures/aws_robomaker_warehouse_Bucket_01.png\n'}
+[1.598784] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01\n'}
+[1.599017] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/model.config\n'}
+[1.599231] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/meshes\n'}
+[1.599905] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/meshes/aws_robomaker_warehouse_DeskC_01_collision.DAE\n'}
+[1.600143] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/meshes/aws_robomaker_warehouse_DeskC_01_visual.DAE\n'}
+[1.600371] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/model.sdf\n'}
+[1.600710] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials\n'}
+[1.600914] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials/.DS_Store\n'}
+[1.601126] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials/textures\n'}
+[1.601330] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_01.png\n'}
+[1.601533] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_02.png\n'}
+[1.601704] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_03.psd\n'}
+[1.601915] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_03.png\n'}
+[1.602296] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_DeskC_01/materials/textures/aws_robomaker_warehouse_DeskC_04.png\n'}
+[1.602766] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01\n'}
+[1.603420] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/model.config\n'}
+[1.603700] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/meshes\n'}
+[1.603932] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/meshes/aws_robomaker_warehouse_Lamp_01_collision.DAE\n'}
+[1.604138] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/meshes/aws_robomaker_warehouse_Lamp_01_visual.DAE\n'}
+[1.604340] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/model.sdf\n'}
+[1.604558] (-) TimerEvent: {}
+[1.605027] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/materials\n'}
+[1.605381] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/materials/textures\n'}
+[1.605461] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_Lamp_01/materials/textures/aws_robomaker_warehouse_Lamp_01.png\n'}
+[1.605529] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01\n'}
+[1.605682] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/model.config\n'}
+[1.605951] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/meshes\n'}
+[1.606047] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/meshes/aws_robomaker_warehouse_TrashCanC_01_collision.DAE\n'}
+[1.606110] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/meshes/aws_robomaker_warehouse_TrashCanC_01_visual.DAE\n'}
+[1.606165] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/model.sdf\n'}
+[1.606226] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/materials\n'}
+[1.606458] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/materials/textures\n'}
+[1.606667] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_TrashCanC_01/materials/textures/aws_robomaker_warehouse_TrashCanC_01.png\n'}
+[1.606871] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01\n'}
+[1.607074] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/model.config\n'}
+[1.607422] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/meshes\n'}
+[1.607613] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/meshes/aws_robomaker_warehouse_ShelfD_01_collision.DAE\n'}
+[1.607819] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/meshes/aws_robomaker_warehouse_ShelfD_01_visual.DAE\n'}
+[1.608022] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/model.sdf\n'}
+[1.608242] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/materials\n'}
+[1.608414] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/materials/textures\n'}
+[1.608621] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_03.png\n'}
+[1.608838] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_01.png\n'}
+[1.609035] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_02.png\n'}
+[1.609440] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfD_01/materials/textures/aws_robomaker_warehouse_ShelfD_04.png\n'}
+[1.609574] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01\n'}
+[1.609641] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/model.config\n'}
+[1.609701] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/meshes\n'}
+[1.609761] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/meshes/aws_robomaker_warehouse_WallB_01_visual.DAE\n'}
+[1.609944] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/meshes/aws_robomaker_warehouse_WallB_01_collision.DAE\n'}
+[1.610055] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/model.sdf\n'}
+[1.610503] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/materials\n'}
+[1.610598] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/materials/textures\n'}
+[1.610658] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_WallB_01/materials/textures/aws_robomaker_warehouse_WallB_01.png\n'}
+[1.610714] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01\n'}
+[1.610769] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/model.config\n'}
+[1.610824] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/meshes\n'}
+[1.610879] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/meshes/aws_robomaker_warehouse_ShelfE_01_collision.DAE\n'}
+[1.610933] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/meshes/aws_robomaker_warehouse_ShelfE_01_visual.DAE\n'}
+[1.610987] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/model.sdf\n'}
+[1.611041] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/.DS_Store\n'}
+[1.611094] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/materials\n'}
+[1.611165] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/materials/.DS_Store\n'}
+[1.611220] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/materials/textures\n'}
+[1.611273] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_01.png\n'}
+[1.611327] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_02.png\n'}
+[1.611380] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_04.png\n'}
+[1.611432] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfE_01/materials/textures/aws_robomaker_warehouse_ShelfE_03.png\n'}
+[1.611482] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01\n'}
+[1.611540] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/model.config\n'}
+[1.611591] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/meshes\n'}
+[1.611644] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/meshes/aws_robomaker_warehouse_ClutteringC_01_visual.DAE\n'}
+[1.611698] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/meshes/aws_robomaker_warehouse_ClutteringC_01_collision.DAE\n'}
+[1.611763] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/model.sdf\n'}
+[1.611816] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/materials\n'}
+[1.611869] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/materials/textures\n'}
+[1.611922] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/materials/textures/aws_robomaker_warehouse_ClutteringC_01.png\n'}
+[1.612006] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringC_01/materials/textures/aws_robomaker_warehouse_ClutteringC_02.png\n'}
+[1.612086] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01\n'}
+[1.612143] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/model.config\n'}
+[1.612196] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/meshes\n'}
+[1.612249] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/meshes/aws_robomaker_warehouse_PalletJackB_01_collision.DAE\n'}
+[1.612301] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/meshes/aws_robomaker_warehouse_PalletJackB_01_visual.DAE\n'}
+[1.612354] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/model.sdf\n'}
+[1.612406] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/.DS_Store\n'}
+[1.612752] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/materials\n'}
+[1.613231] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/materials/.DS_Store\n'}
+[1.613606] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/materials/textures\n'}
+[1.614753] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/materials/textures/aws_robomaker_warehouse_PalletJackB_01.png\n'}
+[1.614976] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_PalletJackB_01/materials/textures/aws_robomaker_warehouse_PalletJackB_02.png\n'}
+[1.615186] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe\n'}
+[1.615389] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/model.config\n'}
+[1.615590] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/meshes\n'}
+[1.615790] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/meshes/cafe.dae\n'}
+[1.615990] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/model.sdf\n'}
+[1.616331] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials\n'}
+[1.616552] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup\n'}
+[1.616754] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_10.jpg\n'}
+[1.616956] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_34.jpg\n'}
+[1.617157] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_37.jpg\n'}
+[1.617357] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_28.jpg\n'}
+[1.617659] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_29.jpg\n'}
+[1.617968] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_30.jpg\n'}
+[1.618178] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_24.jpg\n'}
+[1.618660] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_35.jpg\n'}
+[1.618894] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_31.jpg\n'}
+[1.619839] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_25.jpg\n'}
+[1.620051] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_26.jpg\n'}
+[1.620254] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_22.jpg\n'}
+[1.620456] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_21.jpg\n'}
+[1.620630] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_2.jpg\n'}
+[1.620816] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures_backup/__auto_23.jpg\n'}
+[1.620998] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures\n'}
+[1.621146] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_10.jpg\n'}
+[1.621423] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_34.jpg\n'}
+[1.621497] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_37.jpg\n'}
+[1.621553] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_28.jpg\n'}
+[1.621605] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_29.jpg\n'}
+[1.621657] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_30.jpg\n'}
+[1.621718] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_24.jpg\n'}
+[1.621883] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_35.jpg\n'}
+[1.622228] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_31.jpg\n'}
+[1.622497] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_25.jpg\n'}
+[1.622699] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_26.jpg\n'}
+[1.622900] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_22.jpg\n'}
+[1.623104] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_21.jpg\n'}
+[1.623304] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_2.jpg\n'}
+[1.623506] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe/materials/textures/__auto_23.jpg\n'}
+[1.623853] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table\n'}
+[1.623946] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/model-1_4.sdf\n'}
+[1.624005] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/model.config\n'}
+[1.624058] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/meshes\n'}
+[1.624111] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/meshes/cafe_table.dae\n'}
+[1.624163] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/model.sdf\n'}
+[1.624215] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/materials\n'}
+[1.624267] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/materials/textures\n'}
+[1.624433] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/materials/textures/Wood_Floor_Dark.jpg\n'}
+[1.624635] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/cafe_table/materials/textures/Maple.jpg\n'}
+[1.624857] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01\n'}
+[1.625084] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/model.config\n'}
+[1.625143] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/meshes\n'}
+[1.625196] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/meshes/aws_robomaker_warehouse_ClutteringA_01_collision.DAE\n'}
+[1.625250] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/meshes/aws_robomaker_warehouse_ClutteringA_01_visual.DAE\n'}
+[1.625302] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/model.sdf\n'}
+[1.625353] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/.DS_Store\n'}
+[1.625405] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/materials\n'}
+[1.625467] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/materials/.DS_Store\n'}
+[1.625646] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/materials/textures\n'}
+[1.626042] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/materials/textures/aws_robomaker_warehouse_ClutteringA_02.png\n'}
+[1.626616] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/materials/textures/.DS_Store\n'}
+[1.626853] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/materials/textures/aws_robomaker_warehouse_ClutteringA_03.png\n'}
+[1.627057] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringA_01/materials/textures/aws_robomaker_warehouse_ClutteringA_01.png\n'}
+[1.627259] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01\n'}
+[1.627461] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/model.config\n'}
+[1.627663] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/meshes\n'}
+[1.627863] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/meshes/aws_robomaker_warehouse_RoofB_01_collision.DAE\n'}
+[1.628066] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/meshes/aws_robomaker_warehouse_RoofB_01_visual.DAE\n'}
+[1.628286] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/model.sdf\n'}
+[1.628491] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/materials\n'}
+[1.628692] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/materials/textures\n'}
+[1.628920] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_RoofB_01/materials/textures/aws_robomaker_warehouse_RoofB_01.png\n'}
+[1.629122] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01\n'}
+[1.629323] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/model.config\n'}
+[1.629523] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/meshes\n'}
+[1.629724] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/meshes/aws_robomaker_warehouse_GroundB_01_collision.DAE\n'}
+[1.629942] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/meshes/aws_robomaker_warehouse_GroundB_01_visual.DAE\n'}
+[1.630151] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/model.sdf\n'}
+[1.630230] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/materials\n'}
+[1.630367] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/materials/textures\n'}
+[1.630444] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/materials/textures/aws_robomaker_warehouse_GroundB_01.png\n'}
+[1.630503] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_GroundB_01/materials/textures/aws_robomaker_warehouse_GroundB_02.png\n'}
+[1.631481] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01\n'}
+[1.632097] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/model.config\n'}
+[1.632317] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/meshes\n'}
+[1.632519] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/meshes/aws_robomaker_warehouse_ShelfF_01_visual.DAE\n'}
+[1.632758] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/meshes/aws_robomaker_warehouse_ShelfF_01_collision.DAE\n'}
+[1.632957] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/model.sdf\n'}
+[1.633105] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/materials\n'}
+[1.633435] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/materials/textures\n'}
+[1.633659] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/materials/textures/aws_robomaker_warehouse_ShelfF_03.png\n'}
+[1.633862] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/materials/textures/aws_robomaker_warehouse_ShelfF_02.png\n'}
+[1.634062] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ShelfF_01/materials/textures/aws_robomaker_warehouse_ShelfF_01.png\n'}
+[1.634124] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01\n'}
+[1.634180] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/model.config\n'}
+[1.634343] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/meshes\n'}
+[1.634581] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/meshes/aws_robomaker_warehouse_ClutteringD_01_visual.DAE\n'}
+[1.634784] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/meshes/aws_robomaker_warehouse_ClutteringD_01_collision.DAE\n'}
+[1.635012] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/model.sdf\n'}
+[1.635214] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/materials\n'}
+[1.635416] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/materials/textures\n'}
+[1.635617] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/materials/textures/aws_robomaker_warehouse_ClutteringD_01.png\n'}
+[1.635820] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/model/aws_robomaker_warehouse_ClutteringD_01/materials/textures/aws_robomaker_warehouse_ClutteringD_02.png\n'}
+[1.636024] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script\n'}
+[1.636225] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/delivery_nav.py\n'}
+[1.636843] (rav_bot) StdoutLine: {'line': b'-- Installing: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/elevator.py:Zone.Identifier\n'}
+[1.637055] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/joystick_control.py\n'}
+[1.637259] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/ultrasonic_sensor_obstacle_avoidance.py\n'}
+[1.637460] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/multipoint_follow.py\n'}
+[1.637661] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/auto_docking.py\n'}
+[1.637861] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/point_follow.py\n'}
+[1.638077] (rav_bot) StdoutLine: {'line': b'-- Installing: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/script/elevator.py\n'}
+[1.638190] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config\n'}
+[1.638356] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map2.yaml\n'}
+[1.638560] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/nav2_params.yaml:Zone.Identifier\n'}
+[1.638795] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/gaz_ros2_ctl_use_sim.yaml\n'}
+[1.638859] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/nav2_params.yaml\n'}
+[1.638913] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map3.yaml\n'}
+[1.638966] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map.pgm\n'}
+[1.639135] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map3.pgm\n'}
+[1.639336] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav2_map.yaml\n'}
+[1.639537] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/cafe_map.yaml\n'}
+[1.639738] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map4.pgm\n'}
+[1.639938] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/cafe_map.pgm\n'}
+[1.640143] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav2_map.pgm\n'}
+[1.640353] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map4.yaml\n'}
+[1.640555] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map.yaml\n'}
+[1.640754] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/my_controllers.yaml\n'}
+[1.640955] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/config/rav_map2.pgm\n'}
+[1.641156] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/lib/rav_bot/joystick_control.py\n'}
+[1.641356] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/lib/rav_bot/multipoint_follow.py\n'}
+[1.641555] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/lib/rav_bot/point_follow.py\n'}
+[1.641694] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/lib/rav_bot/ultrasonic_sensor_obstacle_avoidance.py\n'}
+[1.641804] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/lib/rav_bot/auto_docking.py\n'}
+[1.642291] (rav_bot) StdoutLine: {'line': b'-- Installing: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/lib/rav_bot/elevator.py\n'}
+[1.642528] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/ament_index/resource_index/package_run_dependencies/rav_bot\n'}
+[1.642672] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/ament_index/resource_index/parent_prefix_path/rav_bot\n'}
+[1.642876] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/environment/ament_prefix_path.sh\n'}
+[1.643077] (rav_bot) StdoutLine: {'line': b'-- Installing: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/environment/ament_prefix_path.dsv\n'}
+[1.643278] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/environment/path.sh\n'}
+[1.643479] (rav_bot) StdoutLine: {'line': b'-- Installing: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/environment/path.dsv\n'}
+[1.643699] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/local_setup.bash\n'}
+[1.643900] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/local_setup.sh\n'}
+[1.644174] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/local_setup.zsh\n'}
+[1.644374] (rav_bot) StdoutLine: {'line': b'-- Installing: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/local_setup.dsv\n'}
+[1.644874] (rav_bot) StdoutLine: {'line': b'-- Installing: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/package.dsv\n'}
+[1.644996] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/ament_index/resource_index/packages/rav_bot\n'}
+[1.645056] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/cmake/rav_botConfig.cmake\n'}
+[1.645111] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/cmake/rav_botConfig-version.cmake\n'}
+[1.645162] (rav_bot) StdoutLine: {'line': b'-- Up-to-date: /home/abdou/ros2_ws/src/rav_bot/install/rav_bot/share/rav_bot/package.xml\n'}
+[1.645214] (rav_bot) CommandEnded: {'returncode': 0}
+[1.674824] (rav_bot) JobEnded: {'identifier': 'rav_bot', 'rc': 0}
+[1.675782] (-) EventReactorShutdown: {}

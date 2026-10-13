@@ -44,8 +44,8 @@ endif()
 
 install(PROGRAMS
   script/auto_docking.py
+  script/elevator.py
   DESTINATION lib/${PROJECT_NAME}
 )
-
 
 ament_package()
