@@ -38,16 +38,16 @@ class Elevator(Node):
         d('door_time', 1.5)          # s
         d('travel_time', 5.0)        # s
         # zone (world frame, floor-1 coordinates) where the robot counts as "inside the cabin"
-        d('zone_x_min', -4.25)
-        d('zone_x_max', -3.35)
-        d('zone_y_min', 5.55)
+        d('zone_x_min', -3.67)
+        d('zone_x_max', -2.27)
+        d('zone_y_min', 5.2)
         d('zone_y_max', 7.05)
         # door geometry (must match the world file)
-        d('door_y', 5.05)
+        d('door_y', 4.65)
         d('door_z', 1.34)            # door centre height on floor 1
-        d('door_closed_left_x', -4.15)
-        d('door_closed_right_x', -3.45)
-        d('door_slide', 0.45)
+        d('door_closed_left_x', -3.47)
+        d('door_closed_right_x', -2.47)
+        d('door_slide', 1.0)
         d('cmd_vel_topic', '/rav_bot/cmd_vel')
         d('get_state_service', '/get_entity_state')
         d('set_state_service', '/set_entity_state')
