@@ -47,6 +47,10 @@ bt_navigator:
     robot_base_frame: base_link
     odom_topic: /rav_bot/odom
     bt_loop_duration: 10
+<<<<<<< Updated upstream
+=======
+    default_nav_to_pose_bt_xml: "/home/abdou/ros2_ws/src/rav_bot/config/bt_recovery.xml"
+>>>>>>> Stashed changes
     default_server_timeout: 20
     wait_for_service_timeout: 1000
     # 'default_nav_through_poses_bt_xml' and 'default_nav_to_pose_bt_xml' are use defaults:
